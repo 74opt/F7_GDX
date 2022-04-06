@@ -12,6 +12,6 @@ public class Main {
 		//config.setWindowedMode(1920, 1080);
 		config.setFullscreenMode(Lwjgl3ApplicationConfiguration.getDisplayMode());
 		config.setForegroundFPS(60);
-		new Lwjgl3Application(new F7(), config);
+		Lwjgl3Application game = new Lwjgl3Application(new F7(), config);
 	}
 }
