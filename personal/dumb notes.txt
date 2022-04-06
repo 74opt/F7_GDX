@@ -1,0 +1,45 @@
+IMPORTANT:
+- DO BASE F7 FEATURES BEFORE ADDING THE OTHER STUFF
+- MULTIPLAYER IS SECONDARY, ONLY ADD IF TIME
+	- https://appwarp.shephertz.com/ looks cool
+		- https://appwarp.shephertz.com/game-development-center/java-multiplayer-libgdx-tutorial/
+
+Make medkits give health over time rather than all at once (should i?)
+
+Introduce random crits
+
+Try implementing different zones
+
+Try implementing crafting
+
+If crafting, enemies will drop parts
+
+Try adding skill tree and skill points 
+
+Damage types + weaknesses/strength
+(Inspired by warframe/pokemon)
+	Do like warframe and have different health types and damage types
+	Or like pokemon and have different types (easier and probably much better)
+
+Make arraylist for each crafting material as storage
+
+find way to make shields utilize levels
+
+Make each enemy inherit from the Enemy class (so they can do fun special thingamajigs)
+	should i do same with weapons? because yknow fun stuff!
+	and consumables too! (might not actually hm)
+
+individual weapon upgrading (like attachments).
+
+in VSCode you can F1 and use "Format Document With" so that you get nice pretty formatting instead of dumb ugly formatting
+
+CONSOLE COMMANDS
+
+ROADMAP:
+MP1: Recreate F7
+MP2: Lanterna F7
+MP3: Networking F7
+MP4: Dumb Notes F7
+
+Quests:
+Abstract class to implement
