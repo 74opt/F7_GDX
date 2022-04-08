@@ -21,6 +21,13 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
 
+/*
+TODO:
+things to import:
+- jackson databind for json
+
+*/
+
 public class F7 extends ApplicationAdapter {
 	/*
 	! uncomment when done with playing around with the simple game
@@ -126,14 +133,33 @@ public class F7 extends ApplicationAdapter {
 		batch.end();
 
 		// process user input
-		if(Gdx.input.isTouched()) {
-			Vector3 touchPos = new Vector3();
-			touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
-			camera.unproject(touchPos);
-			bucket.x = touchPos.x - 64 / 2;
+		// if(Gdx.input.isTouched()) {
+		// 	Vector3 touchPos = new Vector3();
+		// 	touchPos.set(Gdx.input.getX(), Gdx.input.getY(), 0);
+		// 	camera.unproject(touchPos);
+		// 	bucket.x = touchPos.x - 64 / 2;
+		// }
+
+		// if(Gdx.input.isKeyPressed(Keys.LEFT)) bucket.x -= 200 * Gdx.graphics.getDeltaTime();
+		// if(Gdx.input.isKeyPressed(Keys.RIGHT)) bucket.x += 200 * Gdx.graphics.getDeltaTime();
+
+		/// Matt code
+		if (Gdx.input.isKeyPressed(Keys.W)) {
+			bucket.y += 200 * Gdx.graphics.getDeltaTime();
+		} 
+		if (Gdx.input.isKeyPressed(Keys.S)) {
+			bucket.y -= 200 * Gdx.graphics.getDeltaTime();
+		} 
+		if (Gdx.input.isKeyPressed(Keys.A)) {
+			bucket.x -= 200 * Gdx.graphics.getDeltaTime();
+		} 
+		if (Gdx.input.isKeyPressed(Keys.D)) {
+			bucket.x += 200 * Gdx.graphics.getDeltaTime();
+		} 
+
+		if (Gdx.input.isKeyPressed(Keys.ESCAPE)) {
+			System.exit(0);
 		}
-		if(Gdx.input.isKeyPressed(Keys.LEFT)) bucket.x -= 200 * Gdx.graphics.getDeltaTime();
-		if(Gdx.input.isKeyPressed(Keys.RIGHT)) bucket.x += 200 * Gdx.graphics.getDeltaTime();
 
 		// make sure the bucket stays within the screen bounds
 		if(bucket.x < 0) bucket.x = 0;
@@ -145,6 +171,7 @@ public class F7 extends ApplicationAdapter {
 		// move the raindrops, remove any that are beneath the bottom edge of
 		// the screen or that hit the bucket. In the latter case we play back
 		// a sound effect as well.
+		//! https://www.geeksforgeeks.org/iterator-vs-foreach-in-java/
 		for (Iterator<Rectangle> iter = raindrops.iterator(); iter.hasNext(); ) {
 			Rectangle raindrop = iter.next();
 			raindrop.y -= 200 * Gdx.graphics.getDeltaTime();
