@@ -14,6 +14,9 @@ https://github.com/ChristosPsimadas/Jump_God/blob/master/core/src/com/shlad/bers
 
 But input is handled here:
 https://github.com/ChristosPsimadas/Jump_God/blob/master/core/src/com/shlad/berserk/Screens/PlayScreen.java
+
+TODO: follow along with this vid to learn more libgdx
+https://www.youtube.com/watch?v=43DrvCp9-is
 */
 
 public class Player extends Sprite {
