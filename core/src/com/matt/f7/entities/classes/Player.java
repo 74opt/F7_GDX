@@ -21,9 +21,9 @@ https://www.youtube.com/watch?v=43DrvCp9-is
 
 public class Player extends Sprite {
 	private String name;
-    private double health, tempHealth;
-    private int exp, level, x, y;
-    private int equippedIndex;
+	private double health, tempHealth;
+	private int exp, level, x, y;
+	private int equippedIndex;
 
 	// these should be responsible for taking care of the physics
 	private World world;
@@ -33,8 +33,8 @@ public class Player extends Sprite {
 
 	//! following is commented because those classes don't exist yet
 	//! i am copying this stuff from the original F7
-    // private Weapon[] weapons = new Weapon[4];
-    // private Shield shield;
+	// private Weapon[] weapons = new Weapon[4];
+	// private Shield shield;
 
 	// private HashMap<Consumable, Integer> consumablesHashMap = new HashMap<>();private HashMap<Consumable, In
 

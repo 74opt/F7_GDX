@@ -16,10 +16,12 @@ import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.ScreenUtils;
 import com.badlogic.gdx.utils.TimeUtils;
+import com.matt.f7.entities.classes.Player;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.ScreenUtils;
+import com.matt.f7.entities.construction.Players;
 
 /*
 TODO:
@@ -66,6 +68,9 @@ public class F7 extends ApplicationAdapter {
 	private Rectangle bucket;
 	private Array<Rectangle> raindrops;
 	private long lastDropTime;
+
+	/// matt code
+	private Player player = Players.player;
 
 	@Override
 	public void create() {
@@ -181,6 +186,10 @@ public class F7 extends ApplicationAdapter {
 				iter.remove();
 			}
 		}
+	}
+
+	private void inputHandler() {
+
 	}
 
 	@Override
